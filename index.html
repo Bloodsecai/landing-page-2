@@ -24,50 +24,26 @@
         <span class="brand-text">ApoyoFilipino</span>
       </a>
 
-      <!-- EDIT: NAV LINKS -->
-      <nav class="nav-links" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#content">Course Content</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="navCapsule">
+        <!-- EDIT: NAV LINKS -->
+        <nav class="nav-links" aria-label="Primary">
+          <a class="navLink" href="#about">ABOUT</a>
+          <a class="navLink" href="#content">COURSE CONTENT</a>
+          <a class="navLink" href="#testimonials">TESTIMONIALS</a>
+          <a class="navLink" href="#faq">FAQ</a>
+          <a class="navLink" href="#guidebook">GUIDEBOOK</a>
+          <a class="navLink" href="#community">COMMUNITY</a>
+        </nav>
 
-      <div class="nav-actions">
-        <!-- EDIT: NAV BUTTONS -->
-        <a class="btn btn-ghost" href="#guidebook">Free Guide</a>
-        <a class="btn btn-primary" id="ctaEnrollNow" href="#pricing">Enroll Now</a>
+        <a class="navCTA" href="#pricing">Course Package</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section id="home" class="hero">
-      <div class="hero-inner">
-        <div class="hero-media">
-          <div class="hero-media-card">
-            <img src="images/555.png" alt="DELE A2 course preview" class="hero-img" />
-          </div>
-        </div>
-
-        <div class="hero-content">
-          <div class="hero-card">
-            <h1 class="hero-title">
-              Pass the <span class="hero-strong">Dele A2 Exam</span><br />
-              <span class="hero-accent">with confidence</span>
-            </h1>
-
-            <p class="hero-subtitle">
-              Self-paced DELE A2 review course for Filipinos applying for Spanish nationality.
-            </p>
-
-            <p class="hero-note">
-              Clear strategies. Real exam methods. No stress.
-            </p>
-
-            <a href="#pricing" class="btn btn-primary">ENROLL NOW</a>
-          </div>
-        </div>
+    <section class="hero" id="home">
+      <div class="hero__inner">
+        <img class="hero__banner" src="images/banner4.png" alt="Hero Banner" />
       </div>
     </section>
 
@@ -104,9 +80,10 @@
     </section>
     <section class="section section-soft" id="apto" hidden aria-hidden="true"></section>
 
-    <section class="section bg-banner" id="mission-vision">
-      <div class="container dual-card-grid">
+    <section class="section bg-banner mv-section" id="mission-vision">
+      <div class="container dual-card-grid mv-wrap">
         <article class="info-card mission-card mv-card mv-animate-left" id="missionCard">
+          <p class="mv-kicker">Guiding Principle</p>
           <h3 class="mv-title mv-title--mission">Mission</h3>
           <!-- EDIT: MISSION -->
           <p>
@@ -135,6 +112,7 @@ pag-abot ng kanilang goals sa Spain.
           </p>
         </article>
         <article class="info-card mv-card mv-animate-right" id="visionCard">
+          <p class="mv-kicker">Long-Term Direction</p>
           <h3 class="mv-title mv-title--vision">Vision</h3>
           <!-- EDIT: VISION -->
           <p>
@@ -163,13 +141,27 @@ pag-abot ng kanilang goals sa Spain.
 
     <section id="learner-fit" class="section lf-section">
       <div class="container">
+        <header class="lf-section__head" aria-label="Learner Fit">
+          <h2 class="lf-section__title">LEARNER FIT</h2>
+          <div class="lf-section__subtitle" aria-hidden="true"></div>
+        </header>
+
         <div class="lf-grid">
-          <article class="fitCard learner-card not-for-reveal-left" id="learner-notfor" data-lf="notfor">
+          <article
+            class="fitCard learner-card not-for-reveal-left"
+            id="learner-notfor"
+            data-lf="notfor"
+            role="button"
+            tabindex="0"
+            aria-expanded="false"
+          >
             <button class="fitHeader learner-toggle" type="button" aria-expanded="false" aria-controls="notForBody">
               <span class="sr-only">Toggle not for card</span>
               <span class="fitLabel learner-label">LEARNER FIT</span>
               <span class="fitTitle learner-title">Who this DELE A2 Review Course is NOT for</span>
-              <span class="fitChevron chevron" aria-hidden="true">&#8964;</span>
+              <span class="fitChevronBtn" aria-hidden="true">
+                <span class="fitChevron chevron">&#8964;</span>
+              </span>
             </button>
 
             <div id="notForBody" class="fitBody learner-content" hidden>
@@ -193,14 +185,28 @@ pag-abot ng kanilang goals sa Spain.
                 <p class="not-for-you__lead">Kung hindi ka pa ready mag-commit sa structured review at guided practice,<br>mas mabuting ipagpaliban muna.<br>Pero kung seryoso kang pumasa at gusto mo ng malinaw na direksyon&mdash;<br>nandito ang course para sa&rsquo;yo.</p>
               </div>
             </div>
+
+            <button class="learner-card__hint learner-hint-toggle" type="button" aria-expanded="false" aria-controls="notForBody">
+              <span>Click to view</span>
+              <span class="learner-card__hintIcon" aria-hidden="true">&rsaquo;</span>
+            </button>
           </article>
 
-          <article class="fitCard learner-card not-for-reveal-right" id="learner-for" data-lf="for">
+          <article
+            class="fitCard learner-card not-for-reveal-right"
+            id="learner-for"
+            data-lf="for"
+            role="button"
+            tabindex="0"
+            aria-expanded="false"
+          >
             <button class="fitHeader learner-toggle" type="button" aria-expanded="false" aria-controls="forBody">
               <span class="sr-only">Toggle for card</span>
               <span class="fitLabel learner-label">LEARNER FIT</span>
               <span class="fitTitle learner-title">Who is this DELE A2 Review Course for?</span>
-              <span class="fitChevron chevron" aria-hidden="true">&#8964;</span>
+              <span class="fitChevronBtn" aria-hidden="true">
+                <span class="fitChevron chevron">&#8964;</span>
+              </span>
             </button>
 
             <div id="forBody" class="fitBody learner-content" hidden>
@@ -220,6 +226,11 @@ pag-abot ng kanilang goals sa Spain.
                 <p class="not-for-you__final">Ito ay para sa gustong structured, flexible, at exam-focused review &mdash;<br>kahit busy, kahit beginner, basta seryoso kang pumasa.</p>
               </div>
             </div>
+
+            <button class="learner-card__hint learner-hint-toggle" type="button" aria-expanded="false" aria-controls="forBody">
+              <span>Click to view</span>
+              <span class="learner-card__hintIcon" aria-hidden="true">&rsaquo;</span>
+            </button>
           </article>
         </div>
       </div>
@@ -257,226 +268,212 @@ pag-abot ng kanilang goals sa Spain.
       </div>
     </section>
 
-    <section class="section section-upcoming-wrap bg-banner" id="upcoming-features">
+    <section id="content" class="anchor-spacer" aria-hidden="true"></section>
+
+    <section class="prueba" id="prueba-breakdown">
       <div class="container">
-        <div class="upcoming-shell">
-          <header class="upcoming-section__header">
-            <h2 class="about-title--script upcoming-section__title">Upcoming Features for Students</h2>
-            <p class="upcoming-section__subtitle">Coming soon inside the ApoyoFilipino DELE A2 Review System</p>
-          </header>
-
-          <div class="upcoming-features__grid">
-            <article class="upcoming-card">
-              <span class="upcoming-card__badge">COMING SOON</span>
-              <span class="upcoming-card__icon" aria-hidden="true">PT</span>
-              <h3>Progress Tracker Dashboard</h3>
-              <p>Track your study progress, completed lessons, and practice tasks in one place.</p>
-            </article>
-
-            <article class="upcoming-card">
-              <span class="upcoming-card__badge">COMING SOON</span>
-              <span class="upcoming-card__icon" aria-hidden="true">ME</span>
-              <h3>Mock Exam Simulator</h3>
-              <p>Timed DELE A2 style mock exams with automatic scoring and result breakdown.</p>
-            </article>
-
-            <article class="upcoming-card">
-              <span class="upcoming-card__badge">COMING SOON</span>
-              <span class="upcoming-card__icon" aria-hidden="true">SP</span>
-              <h3>Personal Study Planner</h3>
-              <p>Auto-generated weekly study plan based on your available time.</p>
-            </article>
-
-            <article class="upcoming-card">
-              <span class="upcoming-card__badge">COMING SOON</span>
-              <span class="upcoming-card__icon" aria-hidden="true">FR</span>
-              <h3>Feedback &amp; Review Portal</h3>
-              <p>Submit practice tasks and receive structured feedback inside your dashboard.</p>
-            </article>
+        <article class="prueba__row reveal" style="--d: 0ms">
+          <div class="prueba__imgWrap reveal__img">
+            <img class="prueba__img" src="images/prueba1.png" alt="Prueba 1" />
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="content">
-      <div class="container section-header">
-        <h2>Course Content</h2>
-      </div>
-      <div class="container card-grid content-grid">
-        <article class="content-card">
-          <img src="assets/icon-reading.svg" alt="" aria-hidden="true" />
-          <h4>Prueba 1: Reading</h4>
-          <ul>
-            <!-- EDIT: COURSE CONTENT -->
-            <li>Comprehension strategy drills</li>
-            <li>Time management plan</li>
-            <li>High-frequency vocabulary</li>
-            <li>Guided sample items</li>
-          </ul>
-        </article>
-        <article class="content-card">
-          <img src="assets/icon-listening.svg" alt="" aria-hidden="true" />
-          <h4>Prueba 2: Listening</h4>
-          <ul>
-            <li>Audio pattern recognition</li>
-            <li>Focused note-taking method</li>
-            <li>Distractor spotting practice</li>
-            <li>Exam-style listening rounds</li>
-          </ul>
-        </article>
-        <article class="content-card">
-          <img src="assets/icon-writing.svg" alt="" aria-hidden="true" />
-          <h4>Prueba 3: Writing</h4>
-          <ul>
-            <li>Email and forum structure</li>
-            <li>Essential grammar checklist</li>
-            <li>Connectors and cohesion</li>
-            <li>Template-based practice</li>
-          </ul>
-        </article>
-        <article class="content-card">
-          <img src="assets/icon-speaking.svg" alt="" aria-hidden="true" />
-          <h4>Prueba 4: Speaking</h4>
-          <ul>
-            <li>Monologue build process</li>
-            <li>Photo description framework</li>
-            <li>Role-play response strategy</li>
-            <li>Confidence routines</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section-upcoming-wrap" id="platform-features">
-      <div class="container">
-        <div class="platform-shell">
-          <header class="upcoming-section__header">
-            <h2 class="about-title--script upcoming-section__title">Platform Features (Coming Soon)</h2>
-          </header>
-
-          <div class="platform-strip" role="list">
-            <article class="platform-item" role="listitem">
-              <span class="platform-item__icon" aria-hidden="true">SD</span>
-              <h3>Student Dashboard</h3>
-              <p>Your daily progress, lessons, and tasks at a glance.</p>
-            </article>
-
-            <article class="platform-item" role="listitem">
-              <span class="platform-item__icon" aria-hidden="true">LS</span>
-              <h3>Lesson Library Search</h3>
-              <p>Quickly find lessons by topic, skill, and exam focus.</p>
-            </article>
-
-            <article class="platform-item" role="listitem">
-              <span class="platform-item__icon" aria-hidden="true">SA</span>
-              <h3>Saved Practice Answers</h3>
-              <p>Save your answers and revisit them for future review.</p>
-            </article>
-
-            <article class="platform-item" role="listitem">
-              <span class="platform-item__icon" aria-hidden="true">DR</span>
-              <h3>Downloadable Review Materials</h3>
-              <p>Access printable drills and study references anytime.</p>
-            </article>
-
-            <article class="platform-item" role="listitem">
-              <span class="platform-item__icon" aria-hidden="true">MF</span>
-              <h3>Mobile-friendly Access</h3>
-              <p>Review your lessons smoothly on phone, tablet, or desktop.</p>
-            </article>
+          <div class="prueba__content reveal__text">
+            <h3>Prueba 1 &mdash; Reading</h3>
+            <ul class="prueba__list">
+              <li><strong>DELE A2 Reading Comprehension (Prueba 1) Introduction</strong></li>
+              <li>Test Structure and Timing</li>
+              <li>Key Strategies for Success</li>
+              <li>Time Management Tips</li>
+              <li>Scoring and Content Overview</li>
+              <li>Answer Sheet Guidelines</li>
+              <li>Test Day Instructions</li>
+              <li>Task 1 &ndash; Email-Based Questions</li>
+              <li>Task 2 &ndash; Short Texts / Advertisements</li>
+              <li>Task 3 &ndash; Matching Statements</li>
+              <li>Task 4 &ndash; Long Text / Journalistic Article</li>
+              <li>Common Topics in Reading Texts</li>
+              <li>Extra Tips &ndash; Handling Distractors and Synonyms</li>
+              <li>Preparing Mentally for Listening Test</li>
+            </ul>
           </div>
-        </div>
+        </article>
+
+        <article class="prueba__row reveal" style="--d: 90ms">
+          <div class="prueba__imgWrap reveal__img">
+            <img class="prueba__img" src="images/prueba2.png" alt="Prueba 2" />
+          </div>
+          <div class="prueba__content reveal__text">
+            <h3>Prueba 2 &mdash; Listening</h3>
+            <ul class="prueba__list">
+              <li><strong>DELE A2 Listening (Prueba 2): 4 tasks</strong></li>
+              <li>Preparation: manage time, check audio, memorize instructions, highlight keywords</li>
+              <li>Tasks:</li>
+              <li>T1: conversations + images</li>
+              <li>T2: news / announcements</li>
+              <li>T3: statement matching &amp; synonyms</li>
+              <li>T4: short messages &amp; main ideas</li>
+              <li>Strategies: use keywords/initials, focus on who/when/where/how</li>
+              <li>Listening: first = general idea, second = details</li>
+              <li>Skills: eliminate distractors, recognize tone (news, advice, ads)</li>
+              <li>Practice: mini simulations, active listening, use breaks wisely</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="prueba__row reveal" style="--d: 180ms">
+          <div class="prueba__imgWrap reveal__img">
+            <img class="prueba__img" src="images/prueba3.png" alt="Prueba 3" />
+          </div>
+          <div class="prueba__content reveal__text">
+            <h3>Prueba 3 &mdash; Writing</h3>
+            <ul class="prueba__list">
+              <li><strong>DELE A2 Writing (Prueba 3):</strong></li>
+              <li>overview of tasks and time management</li>
+              <li>Exam basics: use scratch paper, write clearly on official sheets</li>
+              <li>Tasks:</li>
+              <li>Tarea 1: reply to a message (email, note, postcard)</li>
+              <li>Tarea 2: choose one option (personal life or another person via photos)</li>
+              <li>Writing tips: clear handwriting, correct spelling, accents, punctuation</li>
+              <li>Strategies: plan, organize, respect word count, use connectors</li>
+              <li>Grammar focus: pret&eacute;rito imperfecto</li>
+              <li>Content: greetings, likes, proposals, questions, closings</li>
+              <li>Avoid: common mistakes</li>
+              <li>Finish: quick checklist before submitting</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="prueba__row reveal" style="--d: 270ms">
+          <div class="prueba__imgWrap reveal__img">
+            <img class="prueba__img" src="images/prueba4.png" alt="Prueba 4" />
+          </div>
+          <div class="prueba__content reveal__text">
+            <h3>Prueba 4 &mdash; Speaking</h3>
+            <ul class="prueba__list">
+              <li><strong>DELE A2 Speaking (Prueba 4):</strong></li>
+              <li>exam context, structure, and logistics</li>
+              <li>Tasks:</li>
+              <li>Tarea 1: short oral presentation</li>
+              <li>Tarea 2: photo description</li>
+              <li>Tarea 3: dialogue with examiner</li>
+              <li>Preparation: use templates, plan in preparation room</li>
+              <li>Exam tips: T&uacute; vs. Usted, stay relaxed and confident</li>
+              <li>Strategies: connectors, clear structure, simple verb tenses</li>
+              <li>Interaction: warm-up questions, positive attitude</li>
+              <li>Support: filler phrases, ask for clarification, recover from mistakes</li>
+            </ul>
+          </div>
+        </article>
       </div>
     </section>
 
     <section class="section" id="pricing">
+      <div id="course-package" aria-hidden="true"></div>
       <div class="container section-header">
         <h2>Course Package</h2>
       </div>
       <div class="container card-grid pricing-grid">
         <!-- EDIT: PRICING -->
-        <article class="price-card">
-          <h4>Starter</h4>
-          <p class="price">EUR 50</p>
-          <ul>
-            <li>Full self-paced course</li>
-            <li>Weekly group Zoom (1 hour)</li>
-            <li>Private learner community</li>
-          </ul>
-          <a class="btn btn-secondary" href="#contact">Enroll Now</a>
+        <article class="priceCard reveal" style="--d: 0ms">
+          <div class="priceCard__media">
+            <img class="price__img" src="images/50.png" alt="Starter package" />
+            <div class="priceCard__glass"></div>
+          </div>
+          <div class="priceCard__cta">
+            <a class="btnEnroll" href="./enroll/index.html?plan=starter">ENROLL NOW</a>
+          </div>
         </article>
 
-        <article class="price-card popular">
-          <p class="chip">MOST POPULAR</p>
-          <h4>Growth</h4>
-          <p class="price">EUR 75</p>
-          <ul>
-            <li>Everything in Starter</li>
-            <li>2 hours one-on-one session</li>
-            <li>Writing and speaking coaching</li>
-          </ul>
-          <a class="btn btn-primary" href="#contact">Enroll Now</a>
+        <article class="priceCard reveal" style="--d: 90ms">
+          <div class="priceCard__media">
+            <img class="price__img" src="images/75.png" alt="Growth package" />
+            <div class="priceCard__glass"></div>
+          </div>
+          <div class="priceCard__cta">
+            <a class="btnEnroll" href="./enroll/index.html?plan=growth">ENROLL NOW</a>
+          </div>
         </article>
 
-        <article class="price-card">
-          <h4>Premium</h4>
-          <p class="price">EUR 110</p>
-          <ul>
-            <li>Everything in Starter</li>
-            <li>5 hours one-on-one coaching</li>
-            <li>Mock exam simulations</li>
-          </ul>
-          <a class="btn btn-secondary" href="#contact">Enroll Now</a>
+        <article class="priceCard reveal" style="--d: 180ms">
+          <div class="priceCard__media">
+            <img class="price__img" src="images/110.png" alt="Premium package" />
+            <div class="priceCard__glass"></div>
+          </div>
+          <div class="priceCard__cta">
+            <a class="btnEnroll" href="./enroll/index.html?plan=premium">ENROLL NOW</a>
+          </div>
         </article>
       </div>
     </section>
 
-    <section class="section section-soft" id="testimonials">
-      <div class="container section-header">
-        <h2>Testimonials</h2>
-      </div>
-      <div class="container card-grid testimonial-grid">
-        <!-- EDIT: TESTIMONIALS -->
-        <article class="testimonial-card">
-          <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-          <p>
-            "Sobrang laking tulong ng course. Nag-upgrade ako para sa one-on-one session at sobrang
-            worth it. Mas confident na ako ngayon."
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="testimonialCard reveal" style="--d: 0ms">
+          <p class="testimonialCard__quote">
+            &ldquo;Super helpful talaga ang course na ito! Nag-upgrade ako ng package para magkaroon ng 1-on-1
+            session kay Mailyn, at nag-practice kami ng real-life simulations, siya ang entrevistadora at ako
+            ang candidata. Talaga namang na-practice ko sobra, lalo na kung paano makipag-interact sa exam.
+            Tinuro rin niya kung paano sagutin ng tama at kino-correct ang mga sinabi ko. Feeling ko, ready na
+            ready ako sa actual DELE A2 exam!&rdquo;
           </p>
-          <p class="name">SHEILA</p>
-        </article>
-        <article class="testimonial-card">
-          <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-          <p>
-            "Clear guidance, practical strategies, at structured review. Highly recommended sa
-            gustong pumasa sa DELE A2."
-          </p>
-          <p class="name">ROXETTE</p>
-        </article>
-        <article class="testimonial-card">
-          <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-          <p>
-            "Malaking tulong sa speaking at writing practice. Easy to follow ang templates and very
-            realistic ang review."
-          </p>
-          <p class="name">CHRISTY</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="guidebook">
-      <div class="container guidebook-banner">
-        <div class="guidebook-art">
-          <img src="assets/guidebook.svg" alt="Free CCSE guidebook cover" />
+          <div class="testimonialCard__footer">
+            <div class="testimonialCard__stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="testimonialCard__name">SHEILA</div>
+          </div>
         </div>
-        <div class="guidebook-copy">
-          <h2>Download Free Guidebook</h2>
-          <!-- EDIT: GUIDEBOOK CTA -->
-          <p>
-            Get my free CCSE guidebook with simplified official references, app walkthrough, and a
-            sample answer sheet so you can prepare with a clear checklist.
+
+        <div class="testimonialCard reveal" style="--d: 90ms">
+          <p class="testimonialCard__quote">
+            &ldquo;I&rsquo;m so thankful sa course ni Mailyn! Bago pa man niya i-publish, naturuan na niya ako
+            personally, at nag-upgrade pa ako ng package para magkaroon ng 1-on-1 session. Talaga namang super
+            helpful kasi nag-practice kami ng real exam simulations, siya ang entrevistadora at ako ang
+            candidata. Na-practice ko sobra kung paano makipag-interact at sabay na tinuro niya kung paano
+            sagutin at kino-correct ang mga sinabi ko. Dahil sa guidance, strategies, at structured na review
+            niya, APTO ako sa exam. Talaga, nagbunga lahat ng effort at preparation namin. Highly recommended sa
+            lahat ng gustong pumasa sa DELE A2!&rdquo;
           </p>
-          <a class="btn btn-light" href="#contact">Get My Free Guide</a>
+          <div class="testimonialCard__footer">
+            <div class="testimonialCard__stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="testimonialCard__name">ROXETTE</div>
+          </div>
+        </div>
+
+        <div class="testimonialCard reveal" style="--d: 180ms">
+          <p class="testimonialCard__quote">
+            &ldquo;Kaka-basa ko pa lang ng course, ang dami ko na agad natutunan! Very detailed ang bawat section,
+            maraming tips and tricks, at sobrang informative talaga. Talaga namang nakatulong para mas
+            maunawaan ko kung paano sagutin ang questions sa DELE A2 exam at paano mag-prepare nang maayos.
+            Feeling ko confident na ako sa exam dahil step-by-step ang guidance at practical ang strategies na
+            tinuro ni Mailyn.&rdquo;
+          </p>
+          <div class="testimonialCard__footer">
+            <div class="testimonialCard__stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="testimonialCard__name">CHRISTY</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="guidebook" id="guidebook">
+      <div class="guidebook__wrap">
+        <div class="guidebook__media">
+          <img class="guidebook__img" src="images/guidebook.png" alt="Free CCSE Guidebook" />
+        </div>
+
+        <div class="guidebook__content">
+          <div class="guidebook__label">FREE RESOURCE</div>
+          <h2 class="guidebook__title">Download My Free CCSE<br />Guidebook</h2>
+
+          <p class="guidebook__text">
+            Free CCSE Guide Book! Bonus para sa iyo! Nakolekta at na simplify ko ang official manuals mula sa
+            Instituto Cervantes kasama ang step-by-step guide kung paano gamitin ang CCSE exam app at sample
+            answer sheet.
+          </p>
+          <p class="guidebook__text">
+            Perfect para maintindihan mo ang exam format, mag study nang mas epektibo, at maiwasan ang confusion
+            sa preparation.
+          </p>
+
+          <a class="guidebook__btn" href="https://drive.google.com/file/d/19w9GP0nr_tYeeybWA_1udioyvQ_N8_Lf/view?usp=drive_link" target="_blank" rel="noopener noreferrer" draggable="false">GET MY FREE GUIDE</a>
         </div>
       </div>
     </section>
@@ -487,128 +484,296 @@ pag-abot ng kanilang goals sa Spain.
       </div>
       <div class="container faq-list">
         <!-- EDIT: FAQ -->
-        <article class="faq-item">
+        <article class="faq-item faq__item">
           <h3>
             <button
-              class="faq-trigger"
+              class="faq-trigger faq__q"
               type="button"
               aria-expanded="false"
               aria-controls="faq-answer-1"
               id="faq-question-1"
             >
-              Sino ang puwedeng bumili ng course na ito?
-              <span class="faq-icon" aria-hidden="true">+</span>
+              Sino ang pwede bumili ng course na ito?
+              <span class="faq-icon faq__icon" aria-hidden="true">+</span>
             </button>
           </h3>
-          <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1" hidden>
-            Para sa Filipino learners na naghahanda para sa DELE A2 exam, especially busy adults
-            with limited time.
+          <div class="faq-answer faq__a" id="faq-answer-1" role="region" aria-labelledby="faq-question-1">
+            <div class="faq__aInner">
+              <ul class="faq__checks">
+                <li>Para sa mga Filipino learners na nagpa-prepare para sa DELE A2 exam, lalo na kung required ito para sa Spanish nationality.</li>
+                <li>Para sa busy adults na limited ang oras sa pag-aaral.</li>
+                <li>Para sa mga nakapag-aral na pero gusto ng malinaw na guidance.</li>
+              </ul>
+            </div>
           </div>
         </article>
 
-        <article class="faq-item">
+        <article class="faq-item faq__item">
           <h3>
             <button
-              class="faq-trigger"
+              class="faq-trigger faq__q"
               type="button"
               aria-expanded="false"
               aria-controls="faq-answer-2"
               id="faq-question-2"
             >
-              Self-paced ba ang course?
-              <span class="faq-icon" aria-hidden="true">+</span>
+              Pwede bang mag-upgrade ng package later?
+              <span class="faq-icon faq__icon" aria-hidden="true">+</span>
             </button>
           </h3>
-          <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" hidden>
-            Oo. Puwede mong aralin anytime, anywhere, gamit ang clear lesson flow at structured
-            review plan.
+          <div class="faq-answer faq__a" id="faq-answer-2" role="region" aria-labelledby="faq-question-2">
+            <div class="faq__aInner">
+              Oo! Pwede kang start sa Starter package at mag-upgrade anytime sa Growth o Premium kung kailangan mo ng 1-on-1 coaching.
+            </div>
           </div>
         </article>
 
-        <article class="faq-item">
+        <article class="faq-item faq__item">
           <h3>
             <button
-              class="faq-trigger"
+              class="faq-trigger faq__q"
               type="button"
               aria-expanded="false"
               aria-controls="faq-answer-3"
               id="faq-question-3"
             >
-              May support ba para sa speaking at writing?
-              <span class="faq-icon" aria-hidden="true">+</span>
+              Kailangan ko bang perfect ang Spanish ko para pumasa?
+              <span class="faq-icon faq__icon" aria-hidden="true">+</span>
             </button>
           </h3>
-          <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" hidden>
-            Yes. May templates, step-by-step guidance, at one-on-one options depende sa package mo.
+          <div class="faq-answer faq__a" id="faq-answer-3" role="region" aria-labelledby="faq-question-3">
+            <div class="faq__aInner">
+              Hindi. Ang DELE A2 ay hindi nangangailangan ng perfect grammar o advanced vocabulary. Ang course na ito ay nagtuturo paano malinaw at tama mag-communicate sa exam gamit ang practical strategies.
+            </div>
           </div>
         </article>
 
-        <article class="faq-item">
+        <article class="faq-item faq__item">
           <h3>
             <button
-              class="faq-trigger"
+              class="faq-trigger faq__q"
               type="button"
               aria-expanded="false"
               aria-controls="faq-answer-4"
               id="faq-question-4"
             >
-              Paano ako mag-eenroll?
-              <span class="faq-icon" aria-hidden="true">+</span>
+              Paano ako mag-enroll?
+              <span class="faq-icon faq__icon" aria-hidden="true">+</span>
             </button>
           </h3>
-          <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4" hidden>
-            Fill out the contact form below, then we will send complete payment and onboarding
-            details via email.
+          <div class="faq-answer faq__a" id="faq-answer-4" role="region" aria-labelledby="faq-question-4">
+            <div class="faq__aInner">
+              Mag-message sa WhatsApp: +34 672 589 357
+              <br />
+              I-confirm ang package, bayad, at makakakuha ka ng instant access sa course.
+            </div>
+          </div>
+        </article>
+
+        <article class="faq-item faq__item">
+          <h3>
+            <button
+              class="faq-trigger faq__q"
+              type="button"
+              aria-expanded="false"
+              aria-controls="faq-answer-5"
+              id="faq-question-5"
+            >
+              Self-paced ba ang course?
+              <span class="faq-icon faq__icon" aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div class="faq-answer faq__a" id="faq-answer-5" role="region" aria-labelledby="faq-question-5">
+            <div class="faq__aInner">
+              Oo. Pwede mong aralin anytime, anywhere.
+              <br />
+              Kaya perfect para sa busy schedules.
+            </div>
+          </div>
+        </article>
+
+        <article class="faq-item faq__item">
+          <h3>
+            <button
+              class="faq-trigger faq__q"
+              type="button"
+              aria-expanded="false"
+              aria-controls="faq-answer-6"
+              id="faq-question-6"
+            >
+              Ano ang kasama sa course?
+              <span class="faq-icon faq__icon" aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div class="faq-answer faq__a" id="faq-answer-6" role="region" aria-labelledby="faq-question-6">
+            <div class="faq__aInner">
+              <ul class="faq__bullets">
+                <li>Lahat ng 4 DELE A2 pruebas (Reading, Listening, Writing, Speaking) copies</li>
+                <li>Step-by-step strategies</li>
+                <li>Sample answers at task breakdown</li>
+                <li>Free CCSE Guide Book (Instituto Cervantes manual + app walkthrough + sample answer sheet)</li>
+                <li>Bonus: 1,000 DELE A2 vocabulary words</li>
+                <li>Weekly group Zoom</li>
+                <li>Private community support</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="faq-item faq__item">
+          <h3>
+            <button
+              class="faq-trigger faq__q"
+              type="button"
+              aria-expanded="false"
+              aria-controls="faq-answer-7"
+              id="faq-question-7"
+            >
+              Gaano katagal ko matatapos ang course?
+              <span class="faq-icon faq__icon" aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div class="faq-answer faq__a" id="faq-answer-7" role="region" aria-labelledby="faq-question-7">
+            <div class="faq__aInner">
+              Depende sa oras mo, pero since self-paced ito, pwede mong aralin ayon sa schedule mo. Maraming learners ang natatapos sa loob ng 4&ndash;6 weeks kung consistent, pero may flexibility ka na mag-review nang mas mabilis o dahan-dahan.
+            </div>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="section" id="contact">
-      <div class="container contact-grid">
-        <div class="contact-card">
-          <h2>How to Enroll</h2>
-          <!-- EDIT: CONTACT DETAILS -->
-          <p>Use the subject line <strong>DELE A2 REVIEW COURSE</strong> when sending your inquiry.</p>
-          <ul class="contact-list">
-            <li><strong>Email:</strong> apoyofilipino@gmail.com</li>
-            <li><strong>Bizum:</strong> +34 672 589 357</li>
-            <li><strong>IBAN:</strong> ES11 0049 3640 7827 1402 2188</li>
-          </ul>
-          <p class="muted">Check your inbox and spam folder after enrollment.</p>
+    <section class="community" id="community">
+      <div class="community__container">
+        <div class="community__grid">
+          <article class="communityCard reveal" style="--d:0ms">
+            <div class="communityCard__top">
+              <img class="communityCard__icon" src="images/facebook.png" alt="Facebook" />
+              <div class="communityCard__tag">JOIN COMMUNITY</div>
+            </div>
+            <h3 class="communityCard__title">Facebook Community</h3>
+            <p class="communityCard__text">
+              Join our Facebook group for updates, tips, announcements, and learner support.
+            </p>
+            <a class="communityCard__btn" href="https://www.facebook.com/profile.php?id=61564002567431" target="_blank" rel="noopener noreferrer">
+              Join on Facebook &rarr;
+            </a>
+          </article>
+
+          <article class="communityCard reveal" style="--d:90ms">
+            <div class="communityCard__top">
+              <img class="communityCard__icon" src="images/whatsapp.png" alt="WhatsApp" />
+              <div class="communityCard__tag">JOIN COMMUNITY</div>
+            </div>
+            <h3 class="communityCard__title">WhatsApp Support</h3>
+            <p class="communityCard__text">
+              Message us directly on WhatsApp for questions about enrollment and packages.
+            </p>
+            <a class="communityCard__btn communityCard__btn--outline" href="https://wa.me/34672589357" target="_blank" rel="noopener noreferrer">
+              Message on WhatsApp &rarr;
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="enroll" id="enroll">
+      <div class="enroll__shell">
+        <h2 class="enroll__title">How to Enroll</h2>
+
+        <div class="enroll__note">
+          Note: To avail of the course, please use &ldquo;DELE A2 REVIEW COURSE&rdquo; in your email subject line.
         </div>
 
-        <form class="contact-form" action="#" method="post">
-          <h3>Send us a message</h3>
-          <label for="full-name">Full Name</label>
-          <input id="full-name" name="full_name" type="text" placeholder="Your name" required />
+        <div class="enroll__grid">
+          <div class="enroll__col">
+            <div class="enrollCard">
+              <div class="enrollCard__head">BIZUM</div>
+              <div class="enrollCard__text">Send your payment via Bizum</div>
+              <div class="enrollPill">Bizum Number: +34 672 589 357</div>
+              <div class="enrollCard__text">Name: Mailyn Elias</div>
+            </div>
 
-          <label for="email-address">Email</label>
-          <input id="email-address" name="email" type="email" placeholder="you@example.com" required />
+            <div class="enrollCard">
+              <div class="enrollCard__head">BANK TRANSFER</div>
+              <div class="enrollCard__text">BANK TRANSFER:</div>
+              <div class="enrollCard__text">ACCOUNT NAME: Mailyn Elias</div>
+              <div class="enrollPill">IBAN: ES11 0049 3640 7827 1402 2186</div>
+              <div class="enrollPill">BIC: BSCHESMMXXX</div>
+              <div class="enrollCard__text">BANK: CUENTA ONLINE SANTANDANDER</div>
+            </div>
+          </div>
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" placeholder="Tell us your goal..." required></textarea>
+          <div class="enroll__col">
+            <div class="enrollCard enrollCard--tall">
+              <div class="enrollCard__head">SEND RECEIPT</div>
+              <div class="enrollCard__text">Email your payment receipt to:</div>
+              <div class="enrollCard__text">apoyofilipino@gmail.com</div>
+              <div class="enrollCard__text">Include the following information for your course login:</div>
+              <div class="enrollCard__text">Email Address:</div>
+              <div class="enrollCard__text">First Name and Last Name:</div>
+            </div>
+          </div>
+        </div>
 
-          <button class="btn btn-primary" id="ctaSendInquiry" type="submit">Send Inquiry</button>
-        </form>
+        <div class="enroll__footerBox">
+          Once I receive your payment and info, you&rsquo;ll be enrolled within 12&ndash;24 hours, and you&rsquo;ll
+          receive an email with your course access details.
+        </div>
+
+        <div class="enroll__tip">
+          Tip: Double-check your email inbox (and spam/promotions folder) for your course access email.
+        </div>
       </div>
     </section>
   </main>
+  <footer id="footer" class="site-footer" aria-label="ApoyoFilipino Footer">
+    <div class="container">
+      <div class="footer-cta">
+        <h2>Ready to start your DELE A2 journey with confidence?</h2>
+        <a class="btn btn-primary back-to-top" id="ctaBackToTop" href="#top">Back to top</a>
+      </div>
 
-  <footer class="site-footer">
-    <div class="container footer-shell">
-      <p>Ready to start your DELE A2 journey with confidence?</p>
-      <a class="btn btn-primary" id="ctaBackToTop" href="#top">Back to top</a>
-    </div>
-    <div class="container footer-meta">
-      <!-- EDIT: FOOTER -->
-      <p>Copyright 2026 ApoyoFilipino. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+      <div class="footer-card">
+        <div class="footer-grid">
+          <section class="footer-col footer-brand" aria-label="Brand">
+            <a class="footer-brand__link" href="#top" aria-label="ApoyoFilipino">
+              <img class="footer-brand__logo" src="Images/logo.png" alt="ApoyoFilipino logo" />
+              <span class="footer-brand__name">ApoyoFilipino</span>
+            </a>
+            <p class="footer-brand__text">
+              ApoyoFilipino helps Filipinos in Spain prepare confidently for the DELE A2 exam through structured, strategy-based learning.
+            </p>
+          </section>
+
+          <section class="footer-col footer-contact" aria-label="Contact">
+            <h3 class="footer-contact__title">Contact</h3>
+            <a class="footer-contact__email" href="mailto:apoyofilipino@gmail.com">apoyofilipino@gmail.com</a>
+            <div class="footer-contact__actions">
+              <a class="footer-contact__btn" href="https://wa.me/34672589357" target="_blank" rel="noopener noreferrer">
+                <span class="footer-contact__icon" aria-hidden="true">
+                  <img src="Images/whatsapp.png" alt="" />
+                </span>
+                <span>WhatsApp</span>
+              </a>
+              <a class="footer-contact__btn" href="https://www.facebook.com/profile.php?id=61564002567431" target="_blank" rel="noopener noreferrer">
+                <span class="footer-contact__icon" aria-hidden="true">
+                  <img src="Images/facebook.png" alt="" />
+                </span>
+                <span>Facebook</span>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 ApoyoFilipino. All rights reserved.</p>
+          <p>Made with 🤍 by Mac</p>
+        </div>
       </div>
     </div>
   </footer>
+
+
   <div class="apto-modal" id="aptoModal" aria-hidden="true">
     <div class="apto-modal-backdrop" data-apto-close="true"></div>
     <div class="apto-modal-content" role="dialog" aria-modal="true" aria-labelledby="aptoModalTitle">
