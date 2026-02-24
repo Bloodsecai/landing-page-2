@@ -496,7 +496,7 @@ function setupAptoModal() {
 
   aptoTrigger.addEventListener("click", () => {
     if (!aptoModalImg.getAttribute("src")) {
-      aptoModalImg.setAttribute("src", "./images/apto.png");
+      aptoModalImg.setAttribute("src", "/images/apto.png");
     }
     openAptoModal();
   });
