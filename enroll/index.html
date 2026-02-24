@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enroll | ApoyoFilipino</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./enroll.css" />
+</head>
+<body>
+  <main class="enroll-layout">
+      <aside class="enroll-side enroll-left" aria-label="Payment Instructions">
+        <article class="enroll-side__box box">
+          <h2 class="enroll-side__title">BIZUM</h2>
+          <p>Send your payment via Bizum</p>
+          <p><strong>Bizum Number: +34 672 589 357</strong></p>
+          <p>Name: Mailyn Elias</p>
+        </article>
+
+        <article class="enroll-side__box box">
+          <h2 class="enroll-side__title">BANK TRANSFER</h2>
+          <p>BANK TRANSFER:</p>
+          <p>ACCOUNT NAME: Mailyn Elias</p>
+          <p><strong>IBAN: ES11 0049 3640 7827 1402 2186</strong></p>
+          <p><strong>BIC: BSCHESMMXXX</strong></p>
+          <p>BANK: CUENTA ONLINE SANTANDANDER</p>
+        </article>
+
+        <article class="enroll-side__box box">
+          <h2 class="enroll-side__title">SEND RECEIPT</h2>
+          <p>Email your payment receipt to:</p>
+          <p><strong>apoyofilipino@gmail.com</strong></p>
+          <p>Include the following information for your course login:</p>
+          <p>Email Address:</p>
+          <p>First Name and Last Name:</p>
+        </article>
+
+        <article class="enroll-side__box box enroll-side__note">
+          Once I receive your payment and info, you&rsquo;ll be enrolled within 12&ndash;24 hours, and you&rsquo;ll
+          receive an email with your course access details.
+        </article>
+
+        <article class="enroll-side__box box enroll-side__note">
+          Tip: Double-check your email inbox (and spam/promotions folder) for your course access email.
+        </article>
+      </aside>
+
+      <section class="enroll-main enroll-right">
+        <section class="enroll-card" aria-labelledby="enrollTitle">
+          <section id="enrollFormView" class="view view--active" aria-labelledby="enrollTitle">
+            <div class="brand-pill" aria-label="ApoyoFilipino">
+              <img class="brand-logo" src="/images/logo.png" alt="ApoyoFilipino logo" />
+              <span class="brand-text">ApoyoFilipino</span>
+            </div>
+            <h1 id="enrollTitle">Enrollment Form</h1>
+            <p class="enroll-subtitle">
+              Fill in your details and upload your payment receipt. Your selected plan is locked.
+            </p>
+
+            <p id="planWarning" class="warning-message" hidden>
+              Invalid plan selected. Please go back to Pricing.
+            </p>
+
+            <form id="enrollForm" class="enroll-form" novalidate>
+              <label for="subject">Email Subject (Auto)</label>
+              <input
+                id="subject"
+                name="subject"
+                type="text"
+                value="DELE A2 REVIEW COURSE"
+                readonly
+                aria-readonly="true"
+              />
+              <p class="field-hint">This will be used as your email subject.</p>
+
+              <label for="planLabel">Selected Plan</label>
+              <input id="planLabel" name="planLabel" type="text" readonly aria-readonly="true" />
+
+              <label for="fullName">Full Name</label>
+              <input id="fullName" name="fullName" type="text" required autocomplete="name" />
+
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required autocomplete="email" />
+
+              <label for="whatsapp">WhatsApp (Optional)</label>
+              <input id="whatsapp" name="whatsapp" type="text" autocomplete="tel" />
+
+              <label for="notes">Notes (Optional)</label>
+              <textarea id="notes" name="notes" rows="3"></textarea>
+
+              <label for="receipt">Upload Receipt</label>
+              <input
+                id="receipt"
+                name="receipt"
+                type="file"
+                accept="image/*,application/pdf"
+                required
+              />
+
+              <button id="submitButton" type="submit">Submit Enrollment</button>
+              <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </section>
+
+          <section id="thankYouView" class="view view--hidden thankyou-wrap" aria-live="polite">
+            <article id="thankYouCard" class="thankyou-card">
+              <div class="brand-pill thankyou-badge" aria-label="ApoyoFilipino">
+                <img class="brand-logo" src="/images/logo.png" alt="ApoyoFilipino logo" />
+                <span class="brand-text">ApoyoFilipino</span>
+              </div>
+
+              <div class="thankyou-icon check" aria-hidden="true">
+                <svg viewBox="0 0 64 64" role="presentation" focusable="false">
+                  <circle cx="32" cy="32" r="30"></circle>
+                  <path d="M18 33.5 27.5 43 46 24.5"></path>
+                </svg>
+              </div>
+
+              <h2 class="thankyou-title">Thank you so much for enrolling in the course!</h2>
+              <p class="thank-you-body thankyou-body">
+                I&rsquo;m excited to have you on board!<br />
+                <span class="thankyou-emphasis">Please check your email for next steps and</span><br />
+                important information to get started.<br />
+                If you don&rsquo;t see it within a few minutes, be sure<br />
+                to check your spam or promotions folder.
+              </p>
+              <p class="thank-you-bottom thankyou-bottom">Let&rsquo;s get started!</p>
+              <button id="backHomeBtn" class="thankyou-cta" type="button">BACK TO HOME PAGE</button>
+            </article>
+          </section>
+        </section>
+      </section>
+  </main>
+  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    window.__ENV = {
+      SUPABASE_URL: "https://wrjducfolqhckfuttahd.supabase.co",
+      SUPABASE_ANON_KEY: "sb_publishable_KvjZ7yfKNQIEwcRPwsjYcA_2ovGjuFd"
+    };
+  </script>
+  <script src="./enroll.js" defer></script>
+</body>
+</html>
