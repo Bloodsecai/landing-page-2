@@ -5694,3 +5694,107 @@ li {
     border-radius: 14px !important;
   }
 }
+
+@media (max-width: 768px) {
+  .reveal,
+  .reveal[data-animate],
+  .reveal.is-visible,
+  .reveal.is-inview,
+  .section.reveal,
+  section.reveal {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  .prueba_b,
+  .prueba__,
+  .prueba,
+  .prueba * {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+
+  .prueba_b[style*="visibility: hidden"],
+  .prueba_b.hidden,
+  .prueba_b.is-hidden {
+    display: none !important;
+  }
+
+  html,
+  body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+  }
+
+  main {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  #pricing {
+    padding: 28px 16px !important;
+  }
+
+  #pricing .container,
+  #pricing .pricing-grid,
+  #pricing .pricing-cards {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    align-items: stretch !important;
+  }
+
+  #pricing .priceCard,
+  #pricing .pricing-card,
+  #pricing article {
+    width: 100% !important;
+    max-width: 520px;
+    margin: 0 auto !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  #pricing img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: cover !important;
+  }
+
+  #pricing .image,
+  #pricing .media,
+  #pricing .cover {
+    height: 160px !important;
+    background-size: cover !important;
+    background-position: center !important;
+    border-radius: 16px !important;
+  }
+
+  #pricing .content,
+  #pricing .body,
+  #pricing .card-body {
+    background: rgba(255, 255, 255, 0.92) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 16px !important;
+  }
+
+  #pricing .btn,
+  #pricing button,
+  #pricing a.button {
+    width: 100%;
+    max-width: 320px;
+    margin: 12px auto 0;
+    display: block;
+  }
+}
